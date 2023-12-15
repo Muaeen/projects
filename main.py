@@ -1,11 +1,17 @@
-# Importing the random library
+# Importing Necessarylibraries
 import random
+import yaml
 
 from wordsGenerater import createName
+
+def load_config():
+    with open("config.yaml", "r") as f:
+        return yaml.safe_load(f)
 
 def main():
 
     createName()
+    config = load_config()
 
     # Opening the 'names.txt' file in read mode
     with open("names.txt", 'r') as f:
@@ -15,7 +21,7 @@ def main():
     word = random.choice(words)[:-1]
 
     # Setting the number of allowed errors
-    allowed_errors = 7
+    allowed_errors = config['rolls']['allowed_errors']
     # Initializing an empty list to keep track of guesses
     guesses = []
     # Flag to indicate whether the game is done or not
