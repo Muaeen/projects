@@ -2,7 +2,7 @@
 import random
 import yaml
 
-from scr.wordsGenerater import createName
+from scr.namesGenerator import createName
 
 def load_config():
     with open("./config/config.yaml", "r") as f:
