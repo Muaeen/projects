@@ -7,7 +7,7 @@ def createName():
 
     # Using list comprehension to create a list of 10 fake first names
     first_names = [fake.first_name() for _ in range(10)]
-    print(first_names)
+    
 
     # Defining the file name where the names will be saved
     file_path = "names.txt"
