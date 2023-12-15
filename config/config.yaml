@@ -1,0 +1,4 @@
+rolls:
+  allowed_errors: 12
+pathes:
+  text_path: ./text/names.txt
