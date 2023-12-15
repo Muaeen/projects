@@ -1,11 +1,11 @@
-# Importing Necessarylibraries
+# Importing necessarylibraries
 import random
 import yaml
 
-from wordsGenerater import createName
+from scr.wordsGenerater import createName
 
 def load_config():
-    with open("config.yaml", "r") as f:
+    with open("./config/config.yaml", "r") as f:
         return yaml.safe_load(f)
 
 def main():
@@ -14,7 +14,7 @@ def main():
     config = load_config()
 
     # Opening the 'names.txt' file in read mode
-    with open("names.txt", 'r') as f:
+    with open("./text/names.txt", 'r') as f:
         words = f.readlines() # Reading all lines in the file into a list
 
     # Choosing a random word from the list and removing the trailing newline character
